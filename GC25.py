@@ -43,6 +43,7 @@ print("|#|||||||||||||||||||||||||||||####```````###|")
 print("|#||||||||||||PUSH|||||||||||||####\|||||/###|")
 print("|############################################|")
 print(" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\/////////////////////")
+print("")
 Coins = int(input("Enter some coins! "))
 
 while Coins > 2:
@@ -52,25 +53,40 @@ while Coins > 2:
         Coins = Coins - MiloValue
         print("You still have", Coins, "coins to spend")
         Purchase = input("Would you like to purchase anything else? ")
+        if Purchase in ("yes", "Yes"):
+            Purchase = input("What would you like to buy? ")
+        else:
+            print("Goodbye!")
+            break
 
     if Purchase in Wine:
         print("You have purchased wine! ")
         Coins = Coins - WineValue
         print("You still have", Coins, "coins to spend")
         Purchase = input("Would you like to purchase anything else? ")
+        if Purchase in ("yes", "Yes"):
+            Purchase = input("What would you like to buy? ")
+        else:
+            print("Goodbye!")
+            break
 
     if Purchase in Coke:
         print("You have purchased coke! ")
         Coins = Coins - CokeValue
         print("You still have", Coins, "coins to spend")
         Purchase = input("Would you like to purchase anything else? ")
+        if Purchase in ("yes", "Yes"):
+            Purchase = input("What would you like to buy? ")
+        else:
+            print("Goodbye!")
+            break
 
     if Coins < 2:
         MoneyStatus = input("You are out of money! Would you like to enter more? y/n ")
         if MoneyStatus == "y":
             MoreCoins = int(input("Enter more coins! "))
         Coins = Coins + MoreCoins
-        Purchase = input("Would you like to purchase anything else? ")
+        Purchase = input("What would you like to buy? ")
         if MoneyStatus == "n":
             print("Goodbye!")
             break
