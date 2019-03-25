@@ -1,7 +1,32 @@
 import time
 import random
 
-WordList = ["funny","jazz","lucky","bomb","mock"]
+print("Welcome!")
+time.sleep(1)
+print("To Hangman!")
+time.sleep(1)
+
+print("")
+
+print("Scanning User IQ.")
+time.sleep(0.5)
+print("Scanning User IQ..")
+time.sleep(0.5)
+print("Scanning User IQ...")
+time.sleep(0.5)
+
+print("")
+
+print("Finding Suitable Word.")
+time.sleep(0.5)
+print("Finding Suitable Word..")
+time.sleep(0.5)
+print("Finding Suitable Word..")
+time.sleep(0.5)
+
+print("")
+
+WordList = ["funny","jazz","lucky","bomb","mock","bottle","mouse","bag","chair"]
 GuessList = []
 Guesses = 0
 
@@ -15,13 +40,17 @@ for i in range (LengthOfWord):
 for i in range (LengthOfWord):
     GuessList.append("_")
 
+print("If the list shows the word, just press any key again!")
+
+print("")
+
 print(*GuessList, sep = " ")
 
 print("")
 
 Guess = input("Guess a letter: ")
 
-while Guesses < 10:
+while Guesses < 9:
     if Guess not in (RandomWord):
         Guesses = Guesses + 1
         print(GuessList)
@@ -35,12 +64,14 @@ while Guesses < 10:
                 print(GuessList)
                 Guess = input("Guess a letter: ")
 
-    if Guesses > 10:
-        print("Sorry, you lose!")
-
     if GuessList == RandomWordOrganized:
         print("Wowzers! You guessed it in", Guesses, "guesses!")
         break
+
+print("")
+
+if Guesses > 8:
+     print("Sorry, you lose!")
 
 
 
