@@ -1,10 +1,21 @@
 import time
 import random
 
+
 print("Welcome!")
 time.sleep(1)
-print("To Hangman!")
+
+for i in range(20):
+    print ("\n")
+
+print("Welcome To")
 time.sleep(1)
+
+for i in range(20):
+    print ("\n")
+
+print("Welcome To Hangman!")
+
 
 print("")
 
@@ -72,6 +83,10 @@ print("")
 
 if Guesses > 8:
      print("Sorry, you lose!")
+
+
+
+
 
 
 
