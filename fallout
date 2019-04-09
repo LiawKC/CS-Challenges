@@ -1,0 +1,82 @@
+import random
+
+x = " "
+
+SpecialCharacters = ["!","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","=","<","=",">","?","@","[","]","^","_"]
+EligibleWords = ["KNOWN","CRIME","BOOTS","MAYBE","STARK","MALES","WASTE","TAKES","BANANA","BEAR","PIG","DOG","PIE"]
+
+ActualWord = random.choice(EligibleWords)
+
+WordsList = []
+
+for i in range(len(EligibleWords)):
+    RandomWord = random.choice(EligibleWords)
+    WordsList.append(RandomWord)
+    EligibleWords.remove(RandomWord)
+
+RandomNumber1 = random.randint(10,20)
+RandomNumber2 = random.randint(10,20)
+RandomNumber3 = random.randint(10,20)
+RandomNumber4 = random.randint(10,20)
+RandomNumber5 = random.randint(10,20)
+RandomNumber6 = random.randint(10,20)
+RandomNumber7 = random.randint(10,20)
+RandomNumber8 = random.randint(10,20)
+
+for i in range(RandomNumber1):
+    RandomCharacter = random.choice(SpecialCharacters)
+    print(RandomCharacter, end = "")
+print(WordsList[1], end = " ")
+for i in range(RandomNumber2):
+    RandomCharacter2 = random.choice(SpecialCharacters)
+    print(RandomCharacter2, end = " ")
+print(WordsList[2], end = " ")
+
+print("")
+
+for i in range(RandomNumber3):
+    RandomCharacter3 = random.choice(SpecialCharacters)
+    print(RandomCharacter3, end = "")
+print(WordsList[3], end = " ")
+for i in range(RandomNumber4):
+    RandomCharacter4 = random.choice(SpecialCharacters)
+    print(RandomCharacter4, end = " ")
+print(WordsList[4], end = " ")
+
+print("")
+
+for i in range(RandomNumber5):
+    RandomCharacter5 = random.choice(SpecialCharacters)
+    print(RandomCharacter5, end = "")
+print(WordsList[5], end = " ")
+for i in range(RandomNumber6):
+    RandomCharacter6 = random.choice(SpecialCharacters)
+    print(RandomCharacter6, end = " ")
+print(WordsList[6], end = " ")
+
+print("")
+
+for i in range(RandomNumber7):
+    RandomCharacter7 = random.choice(SpecialCharacters)
+    print(RandomCharacter7, end = "")
+print(WordsList[7], end = " ")
+for i in range(RandomNumber8):
+    RandomCharacter8 = random.choice(SpecialCharacters)
+    print(RandomCharacter8, end = " ")
+print(WordsList[8], end = " ")
+
+
+print("")
+print("")
+
+Count = 0
+
+while True:
+    UserChoice = input("Guess a word, chosen one: ")
+    for i in UserChoice:
+        if i in ActualWord:
+            Count = Count + 1
+            print("The likeness is", Count)
+        if UserChoice == ActualWord:
+            print("YAS! QUEEN SLAY!!! YOU DID IT!")
+            break
