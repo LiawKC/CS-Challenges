@@ -31,6 +31,14 @@ for i in range(RandomNumber2):
     RandomCharacter2 = random.choice(SpecialCharacters)
     print(RandomCharacter2, end = " ")
 print(WordsList[2], end = " ")
+Total1 = RandomNumber1 + RandomNumber2
+while True:
+    if Total1 < 40:
+        FillerCharacters = random.choice(SpecialCharacters)
+        print(FillerCharacters, end = " ")
+        Total1 = Total1 + 1
+    else:
+        break
 
 print("")
 
@@ -42,6 +50,14 @@ for i in range(RandomNumber4):
     RandomCharacter4 = random.choice(SpecialCharacters)
     print(RandomCharacter4, end = " ")
 print(WordsList[4], end = " ")
+Total2 = RandomNumber3 + RandomNumber4
+while True:
+    if Total2 < 40:
+        FillerCharacters2 = random.choice(SpecialCharacters)
+        print(FillerCharacters2, end = " ")
+        Total2 = Total2 + 1
+    else:
+        break
 
 print("")
 
@@ -53,7 +69,14 @@ for i in range(RandomNumber6):
     RandomCharacter6 = random.choice(SpecialCharacters)
     print(RandomCharacter6, end = " ")
 print(WordsList[6], end = " ")
-
+Total3 = RandomNumber5 + RandomNumber6
+while True:
+    if Total3 < 40:
+        FillerCharacters3 = random.choice(SpecialCharacters)
+        print(FillerCharacters3, end = " ")
+        Total3 = Total3 + 1
+    else:
+        break
 print("")
 
 for i in range(RandomNumber7):
@@ -64,19 +87,29 @@ for i in range(RandomNumber8):
     RandomCharacter8 = random.choice(SpecialCharacters)
     print(RandomCharacter8, end = " ")
 print(WordsList[8], end = " ")
-
+Total4 = RandomNumber7 + RandomNumber8
+while True:
+    if Total4 < 40:
+        FillerCharacters4 = random.choice(SpecialCharacters)
+        print(FillerCharacters4, end = " ")
+        Total4 = Total4 + 1
+    else:
+        break
 
 print("")
 print("")
 
 Count = 0
 
+print(ActualWord)
+
 while True:
+    Count = 0
     UserChoice = input("Guess a word, chosen one: ")
     for i in UserChoice:
         if i in ActualWord:
             Count = Count + 1
-            print("The likeness is", Count)
+        print("The likeness is", Count)
         if UserChoice == ActualWord:
             print("YAS! QUEEN SLAY!!! YOU DID IT!")
             break
